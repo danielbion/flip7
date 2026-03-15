@@ -76,6 +76,11 @@ def create_card_image(card, settings):
     
     draw.multiline_text((cx, cy), label, fill=color, font=font_main, align="center")
     
+    if card.get("underline", False):
+        c_bbox = draw.multiline_textbbox((cx, cy), label, font=font_main, align="center")
+        line_y = c_bbox[3] + max(10, int(font_size_center * 0.05))
+        draw.line([c_bbox[0], line_y, c_bbox[2], line_y], fill=color, width=max(8, int(font_size_center * 0.05)))
+    
     # 3. Draw Corner Text (Top-Left) or Asset
     font_size_corner = card.get("font_size_corner", settings.get("font_size_corner", 60))
     corner_font = get_font(font_name, font_size_corner)
@@ -98,6 +103,10 @@ def create_card_image(card, settings):
         img.paste(asset_img, (margin_x, margin_y), asset_img)
     else:
         draw.multiline_text((margin_x, margin_y), label, fill=color, font=corner_font, align="center")
+        if card.get("underline", False):
+            c_bbox = draw.multiline_textbbox((margin_x, margin_y), label, font=corner_font, align="center")
+            c_line_y = c_bbox[3] + max(2, int(font_size_corner * 0.05))
+            draw.line([c_bbox[0], c_line_y, c_bbox[2], c_line_y], fill=color, width=max(3, int(font_size_corner * 0.05)))
     
     # 4. Draw Corner Text/Asset (Bottom-Right, rotated 180 degrees)
     corner_canvas = Image.new("RGBA", (width_px, height_px), (0,0,0,0))
@@ -107,6 +116,10 @@ def create_card_image(card, settings):
         corner_canvas.paste(asset_img, (margin_x, margin_y), asset_img)
     else:
         corner_draw.multiline_text((margin_x, margin_y), label, fill=color, font=corner_font, align="center")
+        if card.get("underline", False):
+            c_bbox = corner_draw.multiline_textbbox((margin_x, margin_y), label, font=corner_font, align="center")
+            c_line_y = c_bbox[3] + max(2, int(font_size_corner * 0.05))
+            corner_draw.line([c_bbox[0], c_line_y, c_bbox[2], c_line_y], fill=color, width=max(3, int(font_size_corner * 0.05)))
     
     corner_canvas_rot = corner_canvas.rotate(180)
     img.paste(corner_canvas_rot, (0,0), corner_canvas_rot)
@@ -198,7 +211,7 @@ if __name__ == "__main__":
         img = create_card_image(card, settings)
         images.append(img)
         
-    output_pdf = "print_flip7_v2.pdf"
+    output_pdf = "print_flip7_v3.pdf"
     print(f"Salvando em {output_pdf}...")
     save_cards_to_pdf(images, settings, output_pdf)
     
