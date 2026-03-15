@@ -1,0 +1,11 @@
+[project]
+name = "flip7"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pillow>=12.1.1",
+    "reportlab>=4.4.10",
+    "tqdm>=4.67.3",
+]

@@ -1,0 +1,12 @@
+# Ambientes virtuais e dependências
+.venv/
+__pycache__/
+*.pyc
+
+# Arquivos gerados
+*.pdf
+
+# Editor/Sistema
+.vscode/
+.idea/
+.DS_Store

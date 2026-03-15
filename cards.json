@@ -1,0 +1,153 @@
+{
+  "settings": {
+    "width_mm": 63,
+    "height_mm": 88,
+    "dpi": 300,
+    "font": "impact.ttf",
+    "bg_color": "#FFFFFF",
+    "oval_thickness": 8,
+    "font_size_center": 280,
+    "font_size_corner": 120,
+    "tilt_oval": -30
+  },
+  "cards": [
+    {
+      "id": "0",
+      "label": "0",
+      "count": 1,
+      "color": "#C71585"
+    },
+    {
+      "id": "1",
+      "label": "1",
+      "count": 1,
+      "color": "#8D6E63"
+    },
+    {
+      "id": "2",
+      "label": "2",
+      "count": 2,
+      "color": "#E67E22"
+    },
+    {
+      "id": "3",
+      "label": "3",
+      "count": 3,
+      "color": "#D4AC0D"
+    },
+    {
+      "id": "4",
+      "label": "4",
+      "count": 4,
+      "color": "#16A085"
+    },
+    {
+      "id": "5",
+      "label": "5",
+      "count": 5,
+      "color": "#27AE60"
+    },
+    {
+      "id": "6",
+      "label": "6",
+      "count": 6,
+      "color": "#8E44AD"
+    },
+    {
+      "id": "7",
+      "label": "7",
+      "count": 7,
+      "color": "#C0392B"
+    },
+    {
+      "id": "8",
+      "label": "8",
+      "count": 8,
+      "color": "#229954"
+    },
+    {
+      "id": "9",
+      "label": "9",
+      "count": 9,
+      "color": "#D35400"
+    },
+    {
+      "id": "10",
+      "label": "10",
+      "count": 10,
+      "color": "#B03A2E"
+    },
+    {
+      "id": "11",
+      "label": "11",
+      "count": 11,
+      "color": "#2980B9"
+    },
+    {
+      "id": "12",
+      "label": "12",
+      "count": 12,
+      "color": "#34495E"
+    },
+    {
+      "id": "freeze",
+      "label": "FREEZE",
+      "count": 3,
+      "color": "#4169E1",
+      "font_size_center": 110,
+      "corner_asset": "assets/freeze.png"
+    },
+    {
+      "id": "flip_three",
+      "label": "FLIP\nTHREE",
+      "count": 3,
+      "color": "#898890",
+      "font_size_center": 110,
+      "corner_asset": "assets/flip_three.png"
+    },
+    {
+      "id": "second_chance",
+      "label": "SECOND\nCHANCE",
+      "count": 3,
+      "color": "#FF694F",
+      "font_size_center": 110,
+      "corner_asset": "assets/second_chance.png"
+    },
+    {
+      "id": "x2",
+      "label": "x2",
+      "count": 1,
+      "color": "#DC143C"
+    },
+    {
+      "id": "plus2",
+      "label": "+2",
+      "count": 1,
+      "color": "#DC143C"
+    },
+    {
+      "id": "plus4",
+      "label": "+4",
+      "count": 1,
+      "color": "#DC143C"
+    },
+    {
+      "id": "plus6",
+      "label": "+6",
+      "count": 1,
+      "color": "#DC143C"
+    },
+    {
+      "id": "plus8",
+      "label": "+8",
+      "count": 1,
+      "color": "#DC143C"
+    },
+    {
+      "id": "plus10",
+      "label": "+10",
+      "count": 1,
+      "color": "#DC143C"
+    }
+  ]
+}
